@@ -10,15 +10,15 @@
 
     <body>
         <h1> Задание 1 </h1>
-        <ol>
+        <ul>
             <li><a href="http://kubsu.ru/">КубГУ </a></li>
             <li><a href="https://kubsu.ru">КубГУ с https </a></li>
             <li><a href="https://commons.wikimedia.org/wiki/File:Flower_jtca001.jpg"> <img src="flower.jpg" alt="flower" style="width:900px;height:600px;"> </a></li>
             <li><a href="/inner-page.html"> Сокращенная ссылка на внутренюю страницу </a></li>
             <li><a href="/"> Сокращенная ссылка на главную страницу </a></li>
             <li><a href="#end"> Ссылка на фрагмент текущей страницы </a></li>
-            <li><a href="https://example.com/?fst_param=val_1&sc_param=val_2&th_param=val_3"> Ссылку с тремя параметрами в URL </a></li>
-            <li><a href="https://example.com/?id=123456789"> Ссылку с параметром id в URL </a></li>
+            <li><a href="https://example.com/?fst_param=val1&sc_param=val2&th_param=val3"> Ссылку с тремя параметрами в URL </a></li>
+            <li><a href="https://example.com/?id=12345"> Ссылку с параметром id в URL </a></li>
             <li><a href="./inner-page.html"> Относительная ссылка на страницу в текущем каталоге </a></li>
             <li><a href="./about/1.html"> Относительная ссылка на страницу в каталоге about </a> </li>
             <li><a href="../2.html"> Относительная ссылка на страницу в каталоге уровнем выше текущего </a></li>
@@ -26,7 +26,8 @@
             <li><p> Контекстная <a href="inner-page.html">ссылка</a> в тексте абзаца </p></li>
             <li><a href="https://example.com/p1#text_id"> Ссылка на фрагмент страницы стороннего сайта </a></li>
             
-            <li><img src="cat.jpg" alt="cat" style="width:900px;height:600px;" usemap="#mapped-img">
+            <li> Cсылки из прямоугольных и круглых областей картинки
+                <img src="cat.jpg" alt="cat" style="width:900px;height:600px;" usemap="#mapped-img">
             <map name="mapped-img">
                 <area shape="rect" coords="0,0,300,300" href="rect.html" alt="rect">
                 <area shape="circle" coords="600,350,300" href="circle.html" alt="circle">
@@ -44,7 +45,7 @@
             </ol></li>
 
             <li><a href="ftp://user:password@example.com/directory/file.bin"> Ссылка на файл на сервере FTP с авторизацией </a></li>
-        </ol>
+        </ul>
 
         <form action="/" method="post">
             <label>
@@ -70,11 +71,11 @@
             <label>
                 Пол: <br>
                 <input type="radio" name="radio-group-1" checked="checked" > 
-                Мужской: 
+                Мужской
             </label> <br>
             <label>
                 <input type="radio" name="radio-group-1" > 
-                Женский: 
+                Женский
             </label> <br>
 
             <label>
@@ -105,6 +106,6 @@
             
         </form>
 
-        <h1 id="end"> Ссылка веедет сюда </h1>
+        <h1 id="end"> Ссылка ведет сюда </h1>
     </body>
 </html>
