@@ -1,1 +1,196 @@
+<!DOCTYPE html>
 
+<html lang="ru">
+
+<head>
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My website</title>
+</head>
+
+<body>
+<header>
+	<img src="images/logo.png" alt="logo" id="logo">
+	<h1 id="website-name">My website</h1>
+
+	<div class="menu">
+		<ul id="list-menu">
+			<li><a href="inner-page.html">Inner page</a></li>
+			<li><a href="about/1.html">About page</a></li>
+			<li><a href="circle.html">Circle page</a></li>
+			<li><a href="rect.html">Rect page</a></li>
+		</ul>
+	</div>
+</header>
+
+<div class="content">
+	<h2 class="navigation-links">Навигатор по страничке</h2>
+	<nav>
+		<ul>
+			<li><a href="#hyperlinks-link">Cписок гиперссылок</a></li>
+			<li><a href="#table-link">Таблица</a></li>
+			<li><a href="#form-link">Форма</a></li>
+			<li><a href="#form-link">Конец странички</a></li>
+		</ul>
+	</nav>
+
+
+	<h2 id="hyperlinks-link" class="navigation-links">Список гиперссылок</h2>
+	<ul>
+		<li><a href="http://kubsu.ru/">КубГУ </a></li>
+		<li><a href="https://kubsu.ru">КубГУ с https </a></li>
+		<li><a href="https://commons.wikimedia.org/wiki/File:Flower_jtca001.jpg"> <img src="images/flower.jpg" alt="flower"
+		                                                                               style="width:900px;height:600px;">
+		</a>
+		</li>
+		<li><a href="/inner-page.html"> Сокращенная ссылка на внутренюю страницу </a></li>
+		<li><a href="/"> Сокращенная ссылка на главную страницу </a></li>
+		<li><a href="#end"> Ссылка на фрагмент текущей страницы </a></li>
+		<li><a href="https://example.com/?fst_param=val1&sc_param=val2&th_param=val3"> Ссылку с тремя параметрами в URL </a>
+		</li>
+		<li><a href="https://example.com/?id=12345"> Ссылку с параметром id в URL </a></li>
+		<li><a href="./inner-page.html"> Относительная ссылка на страницу в текущем каталоге </a></li>
+		<li><a href="./about/1.html"> Относительная ссылка на страницу в каталоге about </a></li>
+		<li><a href="../2.html"> Относительная ссылка на страницу в каталоге уровнем выше текущего </a></li>
+		<li><a href="../../3.html"> Относительная ссылка на страницу в каталоге двумя уровнями выше </a></li>
+		<li><p> Контекстная <a href="inner-page.html">ссылка</a> в тексте абзаца </p></li>
+		<li><a href="https://example.com/p1#text_id"> Ссылка на фрагмент страницы стороннего сайта </a></li>
+
+		<li>Cсылки из прямоугольных и круглых областей картинки</li>
+		<li><img src="images/cat.jpg" alt="cat" style="width:900px;height:600px;" usemap="#mapped-img">
+			<map name="mapped-img">
+				<area shape="rect" coords="0,0,300,300" href="rect.html" alt="rect">
+				<area shape="circle" coords="600,350,300" href="circle.html" alt="circle">
+			</map>
+		</li>
+
+		<li><a href=""> Ссылка с пустым href </a></li>
+		<li><a> Ссылка без href </a></li>
+		<li><a href="https://example.com" rel="nofollow"> Ссылка, по которой запрещен переход поисковикам </a></li>
+		<li><!--noindex--><a href="https://example.com/page"> Ссылка, запрещенная для индексации поисковиками </a>
+			<!--/noindex--></li>
+		<li> Нумерованный список ссылок с подписями title</li>
+		<li>
+			<ol>
+				<li><a href="about/1.html" title="first-link"> Первая ссылка с подписью title </a></li>
+				<li><a href="https://example.com" title="second-link"> Вторая ссылка с подписью title</a></li>
+				<li><a href="inner-page.html" title="third-link"> Третья ссылка с подписью title </a></li>
+			</ol>
+		</li>
+
+		<li><a href="ftp://user:password@example.com/directory/file.bin"> Ссылка на файл на сервере FTP с авторизацией </a>
+		</li>
+	</ul>
+
+	<h2 id="table-link" class="navigation-links">Таблица</h2>
+	<table>
+		<tr id="table-title">
+			<th> Заголовок 1</th>
+			<th> Заголовок 2</th>
+			<th> Заголовок 3</th>
+			<th> Заголовок 4</th>
+		</tr>
+		<tr class="odd">
+			<td colspan="2">Объединенная ячейка 1</td>
+			<td>Ячейка 1</td>
+			<td>Ячейка 2</td>
+		</tr>
+		<tr class="even">
+			<td>Ячейка 3</td>
+			<td>Ячейка 4</td>
+			<td>Ячейка 5</td>
+			<td>Ячейка 6</td>
+		</tr>
+		<tr class="odd">
+			<td>Ячейка 7</td>
+			<td colspan="3">Объединенная ячейка 2</td>
+		</tr>
+		<tr class="even">
+			<td>Ячейка 8</td>
+			<td>Ячейка 9</td>
+			<td>Ячейка 10</td>
+			<td>Ячейка 11</td>
+		</tr>
+		<tr class="odd">
+			<td>Ячейка 12</td>
+			<td>Ячейка 13</td>
+			<td >Ячейка 14</td>
+			<td>Ячейка 15</td>
+		</tr>
+		<tr class="even">
+			<td>Ячейка 16</td>
+			<td colspan="2">Объединенная ячейка 3</td>
+			<td>Ячейка 17</td>
+		</tr>
+	</table>
+
+	<h2 id="form-link" class="navigation-links">Форма</h2>
+
+	<form action="/" method="post">
+		<label>
+			ФИО: <br>
+			<input type="text" name="name" placeholder="Введите ваше ФИО">
+		</label> <br>
+
+		<label>
+			Телефон: <br>
+			<input type="tel" name="field-tel" placeholder="Введите ваш телефон">
+		</label> <br>
+
+		<label>
+			E-mail: <br>
+			<input type="email" name="field-email" placeholder="Введите ваш e-mail">
+		</label> <br>
+
+		<label>
+			Дата рождения: <br>
+			<input type="date" name="field-date-of-birth" value="2023-09-05">
+		</label> <br>
+
+		<label >
+			Пол: <br>
+			<input class="checkboxes" type="radio" name="radio-group-1" checked="checked">
+			Мужской
+			<br>
+			<input class="checkboxes" type="radio" name="radio-group-1">
+			Женский
+		</label> <br>
+
+		<label>
+			Любимый язык программирования: <br>
+			<select name="field-favorite-language" multiple="multiple">
+				<option value="Pascal"> Pascal</option>
+				<option value="C"> C</option>
+				<option value="C++"> C++</option>
+				<option value="JavaScript"> JavaScript</option>
+				<option value="PHP"> PHP</option>
+				<option value="Python"> Python</option>
+				<option value="Java"> Java</option>
+				<option value="Haskel"> Haskel</option>
+				<option value="Clojure"> Clojure</option>
+				<option value="Prolog"> Prolog</option>
+				<option value="Scala"> Scala</option>
+			</select>
+		</label> <br>
+
+		<label>
+			<input class="checkboxes" type="checkbox" name="check-1">
+			С контрактом ознакомлен(а)
+		</label> <br>
+
+		<label>
+			<input id="submit-button" type="submit" value="Сохранить">
+		</label>
+
+	</form>
+
+
+	<h1 id="end"> Ссылка ведет сюда </h1>
+</div>
+
+<footer>
+	<h2 id="copyright">(c) Ширяев Максим</h2>
+</footer>
+</body>
+</html>
