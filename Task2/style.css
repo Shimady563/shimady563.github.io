@@ -49,7 +49,7 @@ header #website-name {
 }
 
 nav {
-  width: 300px;
+  width: 600px;
   text-align: center;
   background-color: lightgray;
   border: none;
@@ -58,8 +58,14 @@ nav {
 }
 
 nav ul {
+  padding: 10px;
+
+}
+
+nav li {
   display: inline-block;
-  text-align: left;
+  list-style-type: none;
+  margin: 0 10px;
 }
 
 nav a {
@@ -76,7 +82,7 @@ nav a {
 .content {
   position: relative;
   margin: 0 auto;
-  width: 960px;
+  max-width: 960px;
   align-content: center;
 }
 
