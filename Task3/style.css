@@ -11,24 +11,23 @@ header #logo {
   width: 150px;
   height: 110px;
   right: 10px;
-  float: left;
 }
 
 header .menu {
   position: absolute;
   top: 0;
   right: 0;
-  margin-top: 20px;
-  margin-right: -10px;
+  margin-top: 5px;
+  margin-right: 5px;
 }
 
 header #website-name {
   position: absolute;
-  top: 20px;
-  left: 50px;
+  top: 50px;
+  right: 50px;
   color: white;
   font-family: cursive;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .menu a {
@@ -36,6 +35,7 @@ header #website-name {
   text-decoration: none;
   font-size: 8px;
   font-family: cursive;
+  margin-left: 5px;
 }
 
 nav {
@@ -49,11 +49,9 @@ nav {
 
 nav ul {
   padding: 10px;
-
 }
 
 nav li {
-
   margin: 0 10px;
 }
 
@@ -112,12 +110,12 @@ form {
   text-align: center;
   justify-content: center;
   background-color: lightgray;
-  font-size: 17px;
+  font-size: 10px;
   font-weight: bold;
   line-height: 1;
   border: 2px solid black;
   border-radius: 10px;
-  padding: 20px;
+  padding: 5px;
   margin: 0 auto;
 }
 
@@ -127,12 +125,11 @@ form label {
 
 form input {
   width: 50%;
-  padding: 10px;
   margin: 5px;
 }
 
 form #submit-button {
-  width: 100px;
+  width: 20%;
 }
 
 form .checkboxes {
@@ -197,6 +194,7 @@ footer #copyright {
     display: flex;
     width: 600px;
     text-align: center;
+    justify-content: center;
     background-color: lightgray;
     border: none;
     border-radius: 10px;
@@ -210,7 +208,7 @@ footer #copyright {
   }
 
   nav a {
-    font-size: 10px;
+    font-size: 20px;
     text-decoration: none;
     color: black;
   }
