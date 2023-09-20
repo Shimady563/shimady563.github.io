@@ -1,0 +1,166 @@
+header {
+  width: 100%;
+  height: 200px;
+  background: url("images/background.jpg");
+  background-size: cover;
+}
+
+header #logo {
+  width: 330px;
+  height: 210px;
+  position: relative;
+  right: 30px;
+  float: left;
+}
+
+header .menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: -7px;
+  margin-right: 20px;
+}
+
+header menu #list-menu {
+  margin-top: 0;
+}
+
+#list-menu li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0 10px;
+}
+
+header #website-name {
+  position: absolute;
+  top: 50px;
+  left: 300px;
+  color: #ffffff;
+  font-family: cursive;
+  font-size: 60px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: cursive;
+  margin-left: 20px;
+}
+
+nav {
+  width: 600px;
+  text-align: center;
+  background-color: lightgray;
+  border: none;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+nav ul {
+  padding: 10px;
+
+}
+
+nav li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0 10px;
+}
+
+nav a {
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.navigation-links {
+  text-align: center;
+  font-family: cursive;
+}
+
+.content {
+  position: relative;
+  margin: 0 auto;
+  max-width: 960px;
+  align-content: center;
+}
+
+table {
+  border-radius: 10px;
+  margin: 0 auto;
+  height: 300px;
+  width: 700px;
+}
+
+tr, td, th {
+  border: 2px solid darkslategray;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.even {
+  background-color: darkgray;
+}
+
+.odd {
+  background-color: slategray;
+}
+
+#table-title {
+  background-color: rgb(128, 128, 128);
+}
+
+form {
+  width: 600px;
+  text-align: center;
+  justify-content: center;
+  background-color: lightgray;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+form label {
+  display: block;
+}
+
+form input {
+  width: 50%;
+  padding: 10px;
+  margin: 5px;
+}
+
+form #submit-button {
+  width: 100px;
+}
+
+form .checkboxes {
+  width: auto;
+  margin: 10px;
+}
+
+form select {
+  height: 80px;
+  width: 150px;
+  margin: 5px;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: #001029;
+  line-height: 4;
+  text-indent: 20px;
+}
+
+footer #copyright {
+  color: white;
+  font-family: cursive;
+}
+
+
