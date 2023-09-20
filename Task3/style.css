@@ -1,16 +1,16 @@
 header {
+  display: flex;
   width: 100%;
-  height: 200px;
+  height: 100px;
   background: url("images/background.jpg");
   background-size: cover;
 }
 
 header #logo {
-  width: 330px;
-  height: 210px;
   position: relative;
+  width: 150px;
+  height: 110px;
   right: 30px;
-  float: left;
 }
 
 header .menu {
@@ -23,12 +23,6 @@ header .menu {
 
 header menu #list-menu {
   margin-top: 0;
-}
-
-#list-menu li {
-  display: inline-block;
-  list-style-type: none;
-  margin: 0 10px;
 }
 
 header #website-name {
@@ -45,10 +39,10 @@ header #website-name {
   text-decoration: none;
   font-size: 25px;
   font-family: cursive;
-  margin-left: 20px;
 }
 
 nav {
+  display: flex;
   width: 600px;
   text-align: center;
   background-color: lightgray;
@@ -80,13 +74,15 @@ nav a {
 }
 
 .content {
-  position: relative;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
-  max-width: 960px;
+  width: 100%;
   align-content: center;
 }
 
 table {
+  display: flex;
   border-radius: 10px;
   margin: 0 auto;
   height: 300px;
@@ -112,6 +108,8 @@ tr, td, th {
 }
 
 form {
+  display: flex;
+  flex-direction: column;
   width: 600px;
   text-align: center;
   justify-content: center;
@@ -151,10 +149,11 @@ form select {
 }
 
 footer {
+  display: flex;
   width: 100%;
   height: 100px;
   background-color: #001029;
-  line-height: 4;
+  line-height: 2;
   text-indent: 20px;
 }
 
@@ -162,5 +161,20 @@ footer #copyright {
   color: white;
   font-family: cursive;
 }
+
+@media screen and (min-width: 600px) {
+  header #logo {
+    position: relative;
+    width: 330px;
+    height: 210px;
+    right: 30px;
+    float: left;
+  }
+
+  .content {
+    max-width: 960px;
+  }
+}
+
 
 
