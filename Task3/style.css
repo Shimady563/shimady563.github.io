@@ -10,19 +10,16 @@ header #logo {
   position: relative;
   width: 150px;
   height: 110px;
-  right: 30px;
+  right: 10px;
+  float: left;
 }
 
 header .menu {
   position: absolute;
-  top: 0;
+  top: 10px;
   right: 0;
-  margin-top: -7px;
-  margin-right: 20px;
-}
-
-header menu #list-menu {
-  margin-top: 0;
+  margin-top: 10px;
+  margin-right: 40px;
 }
 
 header #website-name {
@@ -37,14 +34,13 @@ header #website-name {
 .menu a {
   color: white;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 12px;
   font-family: cursive;
 }
 
 nav {
   display: flex;
-  width: 600px;
-  text-align: center;
+  width: 100%;
   background-color: lightgray;
   border: none;
   border-radius: 10px;
@@ -57,8 +53,7 @@ nav ul {
 }
 
 nav li {
-  display: inline-block;
-  list-style-type: none;
+
   margin: 0 10px;
 }
 
@@ -162,17 +157,95 @@ footer #copyright {
   font-family: cursive;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
+  header {
+    height: 200px;
+  }
+
   header #logo {
-    position: relative;
     width: 330px;
     height: 210px;
     right: 30px;
-    float: left;
+  }
+
+  header .menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 20px;
+  }
+
+  header menu #list-menu {
+    margin-top: 0;
+  }
+
+  header #website-name {
+    top: 50px;
+    left: 300px;
+    font-size: 60px;
+  }
+
+  .menu a {
+    font-size: 25px;
+    margin-left: 20px;
+  }
+
+  nav {
+    display: flex;
+    width: 600px;
+    text-align: center;
+    background-color: lightgray;
+    border: none;
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+
+  nav li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 10px;
+  }
+
+  nav a {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .navigation-links {
+    text-align: center;
+    font-family: cursive;
   }
 
   .content {
     max-width: 960px;
+  }
+
+  table {
+    border-radius: 10px;
+    margin: 0 auto;
+    height: 300px;
+    width: 700px;
+  }
+
+  tr, td, th {
+    border: 2px solid darkslategray;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+
+  form {
+    width: 600px;
+    font-size: 17px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  footer {
+    height: 100px;
+    line-height: 2;
+    text-indent: 20px;
   }
 }
 
