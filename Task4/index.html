@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My website</title>
+</head>
+
+<body>
+<header class="header px-2">
+	<div class="row justify-content-end">
+		<div class="col-12 text-right">
+			<a href="inner-page.html">Inner page</a>
+			<a href="about/1.html">About page</a>
+			<a href="circle.html">Circle page</a>
+			<a href="rect.html">Rect page</a>
+		</div>
+	</div>
+		<div class="row justify-content-between justify-content-md-start">
+			<div class="col-4">
+				<img src="images/logo.png" alt="logo" class="logo img-fluid">
+			</div>
+			<div class="col-5 align-self-center">
+				<h1 class="website-name text-start">My website</h1>
+			</div>
+		</div>
+</header>
+
+<div class="container-fluid custom-container px-3">
+	<div class="row">
+		<div class="col-12 text-center mt-3">
+			<h2 class="navigation-links" id="navigator">Навигатор по страничке</h2>
+		</div>
+	</div>
+	<nav class="navbar justify-content-center">
+		<div class="col-12 col-md-3">
+			<a href="#hyperlinks-link">Cписок гиперссылок</a>
+		</div>
+		<div class="col-12 col-md-3">
+			<a href="#table-link">Таблица</a>
+		</div>
+		<div class="col-12 col-md-3">
+			<a href="#form-link">Форма</a>
+		</div>
+		<div class="col-12 col-md-3">
+			<a href="#form-link">Конец странички</a>
+		</div>
+	</nav>
+
+	<div class="row">
+		<div class="col-12 text-center mt-3">
+			<h2 id="hyperlinks-link" class="navigation-links">Список гиперссылок</h2>
+		</div>
+	</div>
+
+	<div class="row mx-1">
+		<ul class="old-links-list">
+			<li><a href="http://kubsu.ru/">КубГУ </a></li>
+			<li><a href="https://kubsu.ru">КубГУ с https </a></li>
+			<li><a href="https://commons.wikimedia.org/wiki/File:Flower_jtca001.jpg"> <img src="images/flower.jpg" alt="flower">
+			</a>
+			</li>
+			<li><a href="/inner-page.html"> Сокращенная ссылка на внутренюю страницу </a></li>
+			<li><a href="/"> Сокращенная ссылка на главную страницу </a></li>
+			<li><a href="#end"> Ссылка на фрагмент текущей страницы </a></li>
+			<li><a href="https://example.com/?fst_param=val1&sc_param=val2&th_param=val3"> Ссылку с тремя параметрами в URL </a>
+			</li>
+			<li><a href="https://example.com/?id=12345"> Ссылку с параметром id в URL </a></li>
+			<li><a href="./inner-page.html"> Относительная ссылка на страницу в текущем каталоге </a></li>
+			<li><a href="./about/1.html"> Относительная ссылка на страницу в каталоге about </a></li>
+			<li><a href="../2.html"> Относительная ссылка на страницу в каталоге уровнем выше текущего </a></li>
+			<li><a href="../../3.html"> Относительная ссылка на страницу в каталоге двумя уровнями выше </a></li>
+			<li><p> Контекстная <a href="inner-page.html">ссылка</a> в тексте абзаца </p></li>
+			<li><a href="https://example.com/p1#text_id"> Ссылка на фрагмент страницы стороннего сайта </a></li>
+
+			<li>Cсылки из прямоугольных и круглых областей картинки</li>
+			<li><img src="images/cat.jpg" alt="cat" usemap="#mapped-img">
+				<map name="mapped-img">
+					<area shape="rect" coords="0,0,100,100" href="rect.html" alt="rect">
+					<area shape="circle" coords="200,50,200" href="circle.html" alt="circle">
+				</map>
+			</li>
+
+			<li><a href=""> Ссылка с пустым href </a></li>
+			<li><a> Ссылка без href </a></li>
+			<li><a href="https://example.com" rel="nofollow"> Ссылка, по которой запрещен переход поисковикам </a></li>
+			<li><!--noindex--><a href="https://example.com/page"> Ссылка, запрещенная для индексации поисковиками </a>
+				<!--/noindex--></li>
+			<li> Нумерованный список ссылок с подписями title</li>
+			<li>
+				<ol>
+					<li><a href="about/1.html" title="first-link"> Первая ссылка с подписью title </a></li>
+					<li><a href="https://example.com" title="second-link"> Вторая ссылка с подписью title</a></li>
+					<li><a href="inner-page.html" title="third-link"> Третья ссылка с подписью title </a></li>
+				</ol>
+			</li>
+
+			<li><a href="ftp://user:password@example.com/directory/file.bin"> Ссылка на файл на сервере FTP с авторизацией </a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="row">
+		<div class="col-12 text-center mt-3">
+			<h2 id="table-link" class="navigation-links">Таблица</h2>
+		</div>
+	</div>
+
+	<table class="table table-hover">
+		<tr id="table-title">
+			<th>Заголовок 1</th>
+			<th>Заголовок 2</th>
+			<th>Заголовок 3</th>
+			<th>Заголовок 4</th>
+		</tr>
+		<tr class="odd">
+			<td colspan="2">Объединенная ячейка 1</td>
+			<td>Ячейка 1</td>
+			<td>Ячейка 2</td>
+		</tr>
+		<tr class="even">
+			<td>Ячейка 3</td>
+			<td>Ячейка 4</td>
+			<td>Ячейка 5</td>
+			<td>Ячейка 6</td>
+		</tr>
+		<tr class="odd">
+			<td>Ячейка 7</td>
+			<td colspan="3">Объединенная ячейка 2</td>
+		</tr>
+		<tr class="even">
+			<td rowspan="2">Объединенная ячейка 3</td>
+			<td>Ячейка 8</td>
+			<td>Ячейка 9</td>
+			<td>Ячейка 10</td>
+		</tr>
+		<tr class="odd">
+			<td>Ячейка 11</td>
+			<td>Ячейка 12</td>
+			<td>Ячейка 13</td>
+		</tr>
+		<tr class="even">
+			<td>Ячейка 14</td>
+			<td colspan="2">Объединенная ячейка 4</td>
+			<td>Ячейка 15</td>
+		</tr>
+	</table>
+
+	<div class="row">
+		<div class="col-12 text-center mt-3">
+			<h2 id="form-link" class="navigation-links">Форма</h2>
+		</div>
+	</div>
+	<div class="row justify-content-center">
+		<form class="text-center px-5 py-3" action="/" method="post">
+			<div class="form-group">
+				<label for="inputText1">ФИО</label>
+				<input class="form-control" type="text" name="name" placeholder="Введите ваше ФИО" id="inputText1">
+			</div>
+			<div class="form-group">
+				<label for="inputTel1">Телефон</label>
+				<input class="form-control" type="tel" name="field-tel" placeholder="Введите ваш телефон" id="inputTel1">
+			</div>
+			<div class="form-group">
+				<label for="inputEmail1">Email</label>
+				<input class="form-control" type="email" name="field-email" placeholder="Введите ваш e-mail" id="inputEmail1">
+			</div>
+			<div class="form-group">
+				<label for="inputDate1">Дата рождения</label>
+				<input class="form-control" type="date" name="field-date-of-birth" value="2023-09-05" id="inputDate1">
+			</div>
+			<label>Пол
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="radio-group-1" checked="checked" id="inputCheck1">
+					<label for="inputCheck1" class="form-check-label">Мужской</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="radio-group-1" checked="checked" id="inputCheck2">
+					<label for="inputCheck2" class="form-check-label">Женский</label>
+				</div>
+			</label>
+			<div class="form-group">
+				<label for="inputSelect1">Любимый язык программирования</label>
+				<select class="form-control" name="field-favorite-language" multiple="multiple" id="inputSelect1">
+					<option value="Pascal"> Pascal</option>
+					<option value="C"> C</option>
+					<option value="C++"> C++</option>
+					<option value="JavaScript"> JavaScript</option>
+					<option value="PHP"> PHP</option>
+					<option value="Python"> Python</option>
+					<option value="Java"> Java</option>
+					<option value="Haskel"> Haskel</option>
+					<option value="Clojure"> Clojure</option>
+					<option value="Prolog"> Prolog</option>
+					<option value="Scala"> Scala</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="inputTextArea1">Биография</label>
+				<textarea class="form-control" placeholder="Расскажите о себе" id="inputTextArea1"></textarea>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" name="check-1" id="inputCheck3">
+				<label for="inputCheck3" class="form-check-label">С контрактом ознакомлен(а)</label>
+			</div>
+			<input class="btn btn-primary mt-3" type="submit" value="Сохранить">
+		</form>
+	</div>
+
+	<div class="row">
+		<div class="col-12 text-center mt-3">
+			<h1 id="end"> Ссылка ведет сюда </h1>
+		</div>
+	</div>
+</div>
+
+<footer class="d-flex pl-4">
+	<h2 class="copyright align-self-center">(c) Ширяев Максим</h2>
+</footer>
+</body>
+</html>
