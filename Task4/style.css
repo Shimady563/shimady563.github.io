@@ -28,8 +28,16 @@ nav a {
   color: black;
 }
 
+table {
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+}
+
 tr, td, th {
   border-color: black;
+  border-width: 1px;
+  border-style: solid;
   font-size: 12px;
 }
 
@@ -78,8 +86,12 @@ footer {
     font-size: 20px;
   }
 
+  table {
+    border-width: 3px;
+  }
+
   tr, td, th {
-    border: 2px solid;
+    border-width: 2px;
     font-size: 22px;
   }
 
