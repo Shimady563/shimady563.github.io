@@ -1,18 +1,19 @@
-document.addEventListener("DOMContentLoaded", function() {
-    let calculateButton = document.getElementById("calculateButton");
-    calculateButton.addEventListener("click", function() {
-        let quantityInput = document.getElementById("quantity");
-        let productSelect = document.getElementById("product");
-        let resultDiv = document.getElementById("result");
+document.addEventListener('DOMContentLoaded', function (event) {
+    let calculateButton = document.getElementById('calculateButton');
+    calculateButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        let quantityInput = document.getElementById('quantity');
+        let productSelect = document.getElementById('product');
+        let result = document.getElementById('result');
 
-        let quantity = parseInt(quantityInput.value);
-        let price = parseInt(productSelect.value);
-
-        if (isNaN(quantity) || isNaN(price)) {
-            resultDiv.innerHTML = "Ошибка: введите корректные данные";
-        } else {
-            let total = quantity * price;
-            resultDiv.innerHTML = "Стоимость заказа: $" + total;
+        let str1 = quantityInput.value;
+        let str2 = productSelect.value;
+        if (str1.match(/^\d+$/) === null || str2.match(/^\d+$/)) {
+            result.innerHTML = "Ошибка, некорректные данные";
+        }
+        else {
+            let ans = parseInt(quantityInput.value) * parseInt(productSelect.value); 
+            result.innerHTML = "Стоимость заказа: $" + ans;
         }
     });
 });
