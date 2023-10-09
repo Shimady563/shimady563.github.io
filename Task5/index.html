@@ -2,26 +2,25 @@
 <html lang="ru">
 <head>
 	<title>Калькулятор стоимости заказа</title>
-	<<link rel="stylesheet" href="style.css" type="text/css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css" type="text/css">
 	<script defer src="index.js"></script>
 </head>
 <body>
 <div class="container">
 	<h2>Калькулятор стоимости заказа</h2>
-	<div class="form-group">
-		<label for="quantity">Количество товара:</label>
-		<input type="text" id="quantity" name="quantity">
-	</div>
-	<div class="form-group">
-		<label for="product">Товар:</label>
-		<select id="product" name="product">
-			<option value="10">Товар 1 - $10</option>
-			<option value="20">Товар 2 - $20</option>
-			<option value="30">Товар 3 - $30</option>
-		</select>
-	</div>
-	<button id="calculateButton">Подсчитать стоимость</button>
+    <div class="form-group">
+        <label for="quantity">Количество товара:</label>
+        <input type="text" id="quantity" name="quantity">
+    </div>
+    <div class="form-group">
+        <label for="product">Товар:</label>
+        <select id="product" name="product">
+            <option value="10">Товар 1 - $10</option>
+            <option value="20">Товар 2 - $20</option>
+            <option value="30">Товар 3 - $30</option>
+        </select>
+    </div>
+    <button id="calculateButton">Подсчитать стоимость</button>
 	<div id="result"></div>
 </div>
 </body>
