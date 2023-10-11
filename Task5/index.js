@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
         let str1 = quantityInput.value;
         let str2 = productSelect.value;
-        if (str1.match(/^\d+$/) === null || str2.match(/^\d+$/)) {
+        if (str1.match(/^\d+$/) === null || str2.match(/^\d+$/) === null) {
             result.innerHTML = "Ошибка, некорректные данные";
         }
         else {
