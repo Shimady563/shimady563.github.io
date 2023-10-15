@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Калькулятор стоимости заказа</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<script defer src="index.js"></script>
+</head>
+<body>
+<div class="container">
+	<h2>Калькулятор стоимости заказа</h2>
+    <div class="form-group">
+        <label for="quantity">Количество товара:</label>
+        <input type="text" id="quantity" name="quantity">
+    </div>
+    <div class="form-group">
+        <label for="product">Товар:</label>
+        <select id="product" name="product">
+            <option value="10">Товар 1 - $10</option>
+            <option value="20">Товар 2 - $20</option>
+            <option value="30">Товар 3 - $30</option>
+        </select>
+    </div>
+    <button id="calculateButton">Подсчитать стоимость</button>
+	<div id="result"></div>
+</div>
+<form class="form2">
+	<div class="quantity-group">
+		<label for="quantity2">Количество Товара:</label>
+		<input type="text" id="quantity2" name="quantity2">
+	</div>
+	<div class="product-group">
+		<label for="product2">Количество Товара:</label>
+		<select id="product2" name="product2">
+			<option value="1">Product 1</option>
+			<option value="2">Product 2</option>
+			<option value="3">Product 3</option>
+		</select>
+	</div>
+	<div class="opt-group">
+		<label for="opt1">Option 1</label>
+		<input type="radio" id="opt1" value="prodOpt">
+		<label for="opt2">Option 2</label>
+		<input type="radio" id="opt2" value="prodOpt">
+		<label for="opt3">Option 3</label>
+		<input type="radio" id="opt3" value="prodOpt">
+	</div>
+	<div class="check-group">
+		<label for="check1">Check 1</label>
+		<input type="checkbox" id="check1" value="prodOpt">
+		<label for="check2">Check 2</label>
+		<input type="checkbox" id="check2" value="prodOpt">
+	</div>
+	<div id="result2"></div>
+</form>
+</body>
+</html>
