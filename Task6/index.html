@@ -17,9 +17,9 @@
     <div class="form-group">
         <label for="product">Товар:</label>
         <select id="product" name="product">
-            <option value="10">Товар 1 - $10</option>
-            <option value="20">Товар 2 - $20</option>
-            <option value="30">Товар 3 - $30</option>
+            <option value="10">Product 1</option>
+            <option value="20">Product 2</option>
+            <option value="30">Product 3</option>
         </select>
     </div>
     <button id="calculateButton">Подсчитать стоимость</button>
@@ -31,26 +31,26 @@
 		<input type="text" id="quantity2" name="quantity2">
 	</div>
 	<div class="product-group">
-		<label for="product2">Количество Товара:</label>
+		<label for="product2">Вид Товара:</label>
 		<select id="product2" name="product2">
-			<option value="1">Product 1</option>
-			<option value="2">Product 2</option>
-			<option value="3">Product 3</option>
+			<option name="prodVal" value="1">Product 1</option>
+			<option name="prodVal" value="2">Product 2</option>
+			<option name="prodVal" value="3">Product 3</option>
 		</select>
 	</div>
 	<div class="opt-group">
 		<label for="opt1">Option 1</label>
-		<input type="radio" id="opt1" value="prodOpt">
+		<input type="radio" name="prodOpt" value="opt1">
 		<label for="opt2">Option 2</label>
-		<input type="radio" id="opt2" value="prodOpt">
+		<input type="radio" name="prodOpt" value="opt2">
 		<label for="opt3">Option 3</label>
-		<input type="radio" id="opt3" value="prodOpt">
+		<input type="radio" name="prodOpt" value="opt3">
 	</div>
 	<div class="check-group">
 		<label for="check1">Check 1</label>
-		<input type="checkbox" id="check1" value="prodOpt">
+		<input type="checkbox" class="prodCh" value="ch1">
 		<label for="check2">Check 2</label>
-		<input type="checkbox" id="check2" value="prodOpt">
+		<input type="checkbox" class="prodCh" value="ch2">
 	</div>
 	<div id="result2"></div>
 </form>
