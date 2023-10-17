@@ -34,6 +34,11 @@ window.addEventListener("DOMContentLoaded", function (event) {
         updateResults();
     });
 
+    let count = document.getElementById("quantity2")
+    count.addEventListener("change", function (event) {
+       updateResults();
+    });
+
     let rad = document.getElementsByName("prodOpt");
     rad.forEach(function(r) {
         r.addEventListener("change", function (event) {
@@ -62,14 +67,14 @@ function updateResults() {
 
     let options = document.getElementsByClassName("opt-group");
     let checks = document.getElementsByClassName("check-group");
-    if (sel.value == 2) {
+    if (sel.value === 2) {
         options[0].style.display = "block";
     }
     else {
         options[0].style.display = "none";
     }
     
-    if (sel.value == 3) {
+    if (sel.value === 3) {
         checks[0].style.display = "block";
     }
     else {
@@ -89,6 +94,9 @@ function updateResults() {
             ans += prices.prodCh[c.value];
         }
     });
+
+    let count = document.getElementById("quantity2");
+    ans *= count.value;
 
     let result = document.getElementById("result2");
     result.innerHTML = ans;
