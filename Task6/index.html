@@ -26,31 +26,32 @@
 	<div id="result"></div>
 </div>
 <form class="form2">
+	<h2>Калькулятор стоимости услуги</h2>
 	<div class="quantity-group">
-		<label for="quantity2">Количество Товара:</label>
+		<label for="quantity2">Количество</label>
 		<input type="text" id="quantity2" name="quantity2" value="1">
 	</div>
 	<div class="product-group">
-		<label for="product2">Вид Товара:</label>
+		<label for="product2">Вид товара</label>
 		<select id="product2" name="product2">
-			<option name="prodVal" value="1">Product 1</option>
-			<option name="prodVal" value="2">Product 2</option>
-			<option name="prodVal" value="3">Product 3</option>
+			<option value="1">Товар 1</option>
+			<option value="2">Товар 2</option>
+			<option value="3">Товар 3</option>
 		</select>
 	</div>
 	<div class="opt-group">
-		<label for="opt1">Option 1</label>
-		<input id="opt1" type="radio" name="prodOpt" value="opt1">
-		<label for="opt2">Option 2</label>
-		<input id="opt2" type="radio" name="prodOpt" value="opt2">
-		<label for="opt3">Option 3</label>
-		<input id="opt3" type="radio" name="prodOpt" value="opt3">
+		<label for="opt1">Тип услуги 1</label>
+		<input id="opt1" type="radio" name="productOptions" value="option1">
+		<label for="opt2">Тип услуги 2</label>
+		<input id="opt2" type="radio" name="productOptions" value="option2">
+		<label for="opt3">Тип услуги 3</label>
+		<input id="opt3" type="radio" name="productOptions" value="option3">
 	</div>
 	<div class="check-group">
-		<label for="check1">Check 1</label>
-		<input id="check1" type="checkbox" class="prodCh" value="ch1">
-		<label for="check2">Check 2</label>
-		<input id="check2" type="checkbox" class="prodCh" value="ch2">
+		<label for="check1">Свойство товара 1</label>
+		<input id="check1" type="checkbox" class="productProperties" value="property1">
+		<label for="check2">Свойство товара 2</label>
+		<input id="check2" type="checkbox" class="productProperties" value="property2">
 	</div>
 	<div id="result2"></div>
 </form>

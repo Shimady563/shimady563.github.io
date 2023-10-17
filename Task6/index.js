@@ -1,4 +1,5 @@
-/*global documentument */
+/*global document*/
+/*global window*/
 
 document.addEventListener("DOMContentLoaded", function () {
     let calculateButton = document.getElementById("calculateButton");
@@ -21,34 +22,34 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-window.addEventListener("DOMContentLoaded", function (event) {
-    let options = document.getElementsByClassName("opt-group");
-    options[0].style.display = "none";
+window.addEventListener("DOMContentLoaded", function () {
+    let radioButtonsDiv = document.getElementsByClassName("opt-group");
+    radioButtonsDiv[0].style.display = "none";
 
-    let checks = document.getElementsByClassName("check-group");
-    checks[0].style.display = "none";
+    let checkBoxesDiv = document.getElementsByClassName("check-group");
+    checkBoxesDiv[0].style.display = "none";
 
-    let select = document.getElementsByName("product2");
-    let s = select[0];
-    s.addEventListener("change", function (event) {
+    let typeInput = document.getElementsByName("product2");
+    let s = typeInput[0];
+    s.addEventListener("change", function () {
         updateResults();
     });
 
-    let count = document.getElementById("quantity2")
-    count.addEventListener("change", function (event) {
-       updateResults();
+    let quantityInput = document.getElementById("quantity2");
+    quantityInput.addEventListener("input", function () {
+        updateResults();
     });
 
-    let rad = document.getElementsByName("prodOpt");
-    rad.forEach(function(r) {
-        r.addEventListener("change", function (event) {
+    let radioButtons = document.getElementsByName("productOptions");
+    radioButtons.forEach(function (radio) {
+        radio.addEventListener("change", function () {
             updateResults();
         });
     });
 
-    let ch = document.querySelectorAll(".check-group input");
-    ch.forEach(function (c) {
-        c.addEventListener("change", function (event) {
+    let checkBoxes = document.querySelectorAll(".check-group input");
+    checkBoxes.forEach(function (check) {
+        check.addEventListener("change", function () {
             updateResults();
         });
     });
@@ -57,62 +58,64 @@ window.addEventListener("DOMContentLoaded", function (event) {
 });
 
 function updateResults() {
-    let prodTypes = document.getElementById("product2");
-    let sel = prodTypes;
+    let typeInput = document.getElementById("product2");
     let prices = getPrices();
-    let ind = parseInt(sel.value) - 1;
     let ans = 0;
-    ans += prices.prodTypes[ind];
-    console.log(sel.value);
+    ans += prices.productTypes[parseInt(typeInput.value) - 1];
 
-    let options = document.getElementsByClassName("opt-group");
-    let checks = document.getElementsByClassName("check-group");
-    if (sel.value === 2) {
-        options[0].style.display = "block";
-    }
-    else {
-        options[0].style.display = "none";
-    }
-    
-    if (sel.value === 3) {
-        checks[0].style.display = "block";
-    }
-    else {
-        checks[0].style.display = "none";
+    let radioButtonsDiv = document.getElementsByClassName("opt-group");
+    let checkBoxesDiv = document.getElementsByClassName("check-group");
+    if (typeInput.value === "2") {
+        radioButtonsDiv[0].style.display = "block";
+    } else {
+        radioButtonsDiv[0].style.display = "none";
     }
 
-    let rad = document.getElementsByName("prodOpt");
-    rad.forEach(function(r) {
-        if (r.checked) {
-            ans += prices.prodOpt[r.value]
+    if (typeInput.value === "3") {
+        checkBoxesDiv[0].style.display = "block";
+    } else {
+        checkBoxesDiv[0].style.display = "none";
+    }
+
+    let radioButtons = document.getElementsByName("productOptions");
+    radioButtons.forEach(function (radios) {
+        if (radios.checked && typeInput.value === "2") {
+            let addedPrice = prices.productOptions[radios.value];
+            if (addedPrice !== undefined) {
+                ans += addedPrice;
+            }
         }
     });
-    
-    let ch = document.querySelectorAll(".check-group input");
-    ch.forEach(function(c) {
-        if (c.checked) {
-            ans += prices.prodCh[c.value];
+    let checkBoxes = document.querySelectorAll(".check-group input");
+    checkBoxes.forEach(function (check) {
+        if (check.checked && typeInput.value === "3") {
+            ans += prices.productProperties[check.value];
         }
     });
 
-    let count = document.getElementById("quantity2");
-    ans *= count.value;
+    let quantityInput = document.getElementById("quantity2");
+    ans *= quantityInput.value;
 
-    let result = document.getElementById("result2");
-    result.innerHTML = ans;
+    let str = ans.toString();
+    let resultDiv = document.getElementById("result2");
+    if (str.match(/^\d+$/) !== null) {
+        resultDiv.innerHTML = "Итоговая стоимость " + ans + "₽";
+    } else {
+        resultDiv.innerHTML = "Ошибка, некорректные данные";
+    }
 }
 
 function getPrices() {
     return {
-        prodTypes: [100, 200, 300],
-        prodOpt: {
-            opt1: 25,
-            opt2: 46,
-            opt3: 69,
+        productOptions: {
+            option1: 25,
+            option2: 46,
+            option3: 69
         },
-        prodCh: {
-            ch1: 5,
-            ch2: 10,
-        }
+        productProperties: {
+            property1: 11,
+            property2: 17
+        },
+        productTypes: [100, 200, 300]
     };
 }
