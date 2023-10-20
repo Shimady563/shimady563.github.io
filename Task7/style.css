@@ -1,0 +1,17 @@
+.gallery {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-slide {
+  padding: 5px;
+  margin: 5px;
+}
+
+body {
+  background-color: lavender;
+}
