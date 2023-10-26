@@ -69,6 +69,7 @@ function updateResults() {
         radioButtonsDiv[0].style.display = "block";
     } else {
         radioButtonsDiv[0].style.display = "none";
+
     }
 
     if (typeInput.value === "3") {
