@@ -52,4 +52,23 @@ document.addEventListener("DOMContentLoaded", function () {
             localStorage.setItem("check", false);
         }
     });
+
+    let openButton = document.getElementById("open-form");
+    let popupDiv = document.getElementById("popup");
+    openButton.addEventListener("click", function () {
+        popupDiv.classList.remove("hidden");
+        history.pushState({page: "form"}, "Форма обратной связи", "?form=true");
+    });
+
+    window.addEventListener("popstate", function (event) {
+        popupDiv.classList.add("hidden");
+        history.back();
+    });
+
+    let submitForm = document.getElementById("form-to-submit");
+    submitForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        localStorage.clear();
+    })
 });
