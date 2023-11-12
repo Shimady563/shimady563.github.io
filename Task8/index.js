@@ -1,3 +1,10 @@
+/*global document*/
+/*global window*/
+/*global localStorage*/
+/*global history*/
+/*global XMLHttpRequest*/
+/*global FormData*/
+
 document.addEventListener("DOMContentLoaded", function () {
     let nameInput = document.getElementById("name-input");
     let emailInput = document.getElementById("name-input");
@@ -47,9 +54,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     checkInput.addEventListener("change", function () {
         if (checkInput.checked === true) {
-            localStorage.setItem("check", true);
+            localStorage.setItem("check", "true");
         } else {
-            localStorage.setItem("check", false);
+            localStorage.setItem("check", "false");
         }
     });
 
@@ -60,15 +67,38 @@ document.addEventListener("DOMContentLoaded", function () {
         history.pushState({page: "form"}, "Форма обратной связи", "?form=true");
     });
 
-    window.addEventListener("popstate", function (event) {
+    window.addEventListener("popstate", function () {
         popupDiv.classList.add("hidden");
+        messageDiv.innerHTML = "";
+        messageDiv.classList.add("hidden");
         history.back();
     });
 
     let submitForm = document.getElementById("form-to-submit");
+    let messageDiv = document.getElementById("message-div");
     submitForm.addEventListener("submit", function (event) {
         event.preventDefault();
 
+        let xhr = new XMLHttpRequest();
+        let formData = new FormData(submitForm);
+        xhr.open("POST", "https://formcarry.com/s/vTUnbIdRSE");
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.setRequestHeader("Accept", "application/json");
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    messageDiv.innerHTML = "Данные отправлены";
+                } else {
+                    let s = "Произошла ошибка при отправке данных";
+                    messageDiv.innerHTML = s;
+                }
+                messageDiv.classList.remove("hidden");
+            }
+        };
+
+        xhr.send(JSON.stringify(Object.fromEntries(formData.entries())));
         localStorage.clear();
-    })
+        submitForm.reset();
+    });
 });

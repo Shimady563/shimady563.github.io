@@ -22,32 +22,32 @@
 					<h3>Форма обратной связи</h3>
 					<div class="form-group">
 						<label for="name-input">ФИО</label>
-						<input class="form-control" type="text" id="name-input" placeholder="Введите ФИО" required>
+						<input class="form-control" type="text" id="name-input" name="name" placeholder="Введите ФИО" required>
 					</div>
 					<div class="form-group">
 						<label for="email-input">Email</label>
-						<input class="form-control" type="email" id="email-input" placeholder="Введите email" required>
+						<input class="form-control" type="email" id="email-input" name="email" placeholder="Введите email" required>
 					</div>
 					<div class="form-group">
 						<label for="tel-input">Номер телефона</label>
-						<input class="form-control" type="tel" id="tel-input" placeholder="Введите номер телефона" required>
+						<input class="form-control" type="tel" id="tel-input" name="tel" placeholder="Введите номер телефона" required>
 					</div>
 					<div class="form-group">
 						<label for="org-input">Организация</label>
-						<input class="form-control" type="text" id="org-input" placeholder="Введите организацию" required>
+						<input class="form-control" type="text" id="org-input" name="org" placeholder="Введите организацию" required>
 					</div>
 						<label for="message-input">Сообщение</label>
-						<textarea class="form-control no-resize" id="message-input" placeholder="Введите ваше сообщение" required></textarea>
+						<textarea class="form-control no-resize" id="message-input" name="message" placeholder="Введите ваше сообщение" required></textarea>
 					<div class="form-group">
-						<input class="form-check-input" type="checkbox" id="check-input" required>
+						<input class="form-check-input" type="checkbox" name="ch" id="check-input" required>
 						<label for="check-input">Я согласен с политикой обратботки персональных данных</label>
 					</div>
-					<button class="btn btn-primary" type="submit" id="submit-button">Отправить</button>
+					<button class="btn btn-primary" type="submit" name="sub" id="submit-button">Отправить</button>
 				</form>
 			</div>
 		</div>
 	</div>
-	<div id="massege-div" class="hidden"></div>
+	<div id="message-div" class="hidden"></div>
 </div>
 </body>
 </html>
