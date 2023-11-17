@@ -71,7 +71,6 @@ document.addEventListener("DOMContentLoaded", function () {
         popupDiv.classList.add("hidden");
         messageDiv.innerHTML = "";
         messageDiv.classList.add("hidden");
-        history.back();
     });
 
     let submitForm = document.getElementById("form-to-submit");
