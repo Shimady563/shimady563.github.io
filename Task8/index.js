@@ -67,10 +67,12 @@ document.addEventListener("DOMContentLoaded", function () {
         history.pushState({page: "form"}, "Форма обратной связи", "?form=true");
     });
 
-    window.addEventListener("popstate", function () {
-        popupDiv.classList.add("hidden");
-        messageDiv.innerHTML = "";
-        messageDiv.classList.add("hidden");
+    window.addEventListener("popstate", function (event) {
+        if (event.state && event.state.page === "form") {
+            popupDiv.classList.add("hidden");
+            messageDiv.innerHTML = "";
+            messageDiv.classList.add("hidden");
+        }
     });
 
     let submitForm = document.getElementById("form-to-submit");
