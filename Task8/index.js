@@ -73,7 +73,6 @@ document.addEventListener("DOMContentLoaded", function () {
             popupDiv.classList.add("hidden");
             messageDiv.innerHTML = "";
             messageDiv.classList.add("hidden");
-            history.pushState({page: "noForm"}, null, "?form=false");
         }
     });
 
