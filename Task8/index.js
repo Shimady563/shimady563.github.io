@@ -68,10 +68,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     window.addEventListener("popstate", function (event) {
+        history.forward();
         if (event.state && event.state.page === "form") {
             popupDiv.classList.add("hidden");
             messageDiv.innerHTML = "";
             messageDiv.classList.add("hidden");
+            history.pushState({page: "noForm"}, null, "?form=false");
         }
     });
 
